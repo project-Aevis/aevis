@@ -1,0 +1,109 @@
+# ==============================================================================
+# Build Directories & CMake Artifacts
+# ==============================================================================
+build/
+build-*/
+*build-*/
+build.*/
+_build/
+bin/
+out/
+CMakeFiles/
+CMakeCache.txt
+CMakeScripts/
+Testing/
+Makefile
+Makefile*
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+_deps/
+CMakeUserPresets.json
+CMakeLists.txt.user*
+*-prefix/
+
+# ==============================================================================
+# C/C++ Compiled Objects, Binaries & Libraries
+# ==============================================================================
+*.slo
+*.lo
+*.o
+*.obj
+*.a
+*.la
+*.lai
+*.so
+*.so.*
+*.dylib
+*.dll
+*.exe
+
+# ==============================================================================
+# Qt & QML Generated Files
+# ==============================================================================
+object_script.*.Release
+object_script.*.Debug
+*_plugin_import.cpp
+.qmake.cache
+.qmake.stash
+*.pro.user
+*.pro.user.*
+*.qbs.user
+*.qbs.user.*
+*.moc
+moc_*.cpp
+moc_*.h
+qrc_*.cpp
+ui_*.h
+*.qmlc
+*.jsc
+*.qm
+*.prl
+.qt/
+target_wrapper.*
+
+# ==============================================================================
+# IDEs, Editors & Tooling
+# ==============================================================================
+# JetBrains / Android Studio / IntelliJ / CLion
+.idea/
+*.iws
+*.iml
+
+# VS Code
+.vscode/
+
+# Qt Creator
+*.autosave
+*.qmlproject.user
+*.qmlproject.user.*
+*creator.user*
+*.user
+
+# Vim & Temporary Files
+*.swp
+*.swo
+*~
+.cache/
+__pycache__/
+*.pyc
+
+# Logs & Scratch
+*.log
+
+# ==============================================================================
+# Operating System & File System Junk
+# ==============================================================================
+.DS_Store
+Thumbs.db
+.directory
+.fuse_hidden*
+.Trash-*
+.nfs*
+
+# ==============================================================================
+# Workspace Level
+# ==============================================================================
+*/build/
+*/*/build/
