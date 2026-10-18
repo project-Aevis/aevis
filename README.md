@@ -75,6 +75,12 @@ sudo ./install.sh
 
 ---
 
+## 🙏 Credits & Acknowledgments
+
+Project Aevis is built upon the foundational work of **[Cutefish OS](https://github.com/cutefishos)** and its original creators and contributors. We express our sincere gratitude to the Cutefish OS team and community for developing the initial desktop shell, FishUI library, and core system frameworks that serve as the foundation of this project.
+
+---
+
 ## 📄 License
 
 Project Aevis components are released under the [GNU General Public License v3.0](LICENSE).
