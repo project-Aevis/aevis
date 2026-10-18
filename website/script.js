@@ -44,4 +44,30 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // Demo Tab Switching
+    const demoTabs = document.querySelectorAll('.demo-tab');
+    const demoPanels = document.querySelectorAll('.demo-panel');
+
+    demoTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            const target = tab.getAttribute('data-target');
+
+            demoTabs.forEach(t => t.classList.remove('active'));
+            demoPanels.forEach(p => p.classList.remove('active'));
+
+            tab.classList.add('active');
+            const panel = document.getElementById(target);
+            if (panel) panel.classList.add('active');
+        });
+    });
 });
+
+// Control Center Interactivity Globals
+window.toggleCcTile = function(tile) {
+    tile.classList.toggle('active');
+};
+
+window.toggleCcAction = function(item) {
+    item.classList.toggle('active');
+};

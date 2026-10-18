@@ -222,6 +222,282 @@
         </div>
     </section>
 
+    <!-- Interactive Component Explorer Section -->
+    <section class="section section-alt" id="demo">
+        <div class="container">
+            <div class="section-header">
+                <h2>Interactive Component Explorer</h2>
+                <p>Experience Aevis OS apps and system widgets live in your browser.</p>
+            </div>
+
+            <div class="demo-tabs">
+                <button class="demo-tab active" data-target="control-center">🎛️ Control Center</button>
+                <button class="demo-tab" data-target="settings-app">⚙️ Settings</button>
+                <button class="demo-tab" data-target="photos-app">🖼️ Photos</button>
+                <button class="demo-tab" data-target="filemanager-app">📁 File Manager</button>
+                <button class="demo-tab" data-target="music-app">🎵 Music Center</button>
+            </div>
+
+            <div class="demo-viewport">
+                <!-- Control Center Demo -->
+                <div class="demo-panel active" id="control-center">
+                    <div class="control-center-popover">
+                        <div class="cc-header">
+                            <span class="cc-title">Control Center</span>
+                            <div class="cc-actions">
+                                <button class="cc-icon-btn" title="Lock"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg></button>
+                                <button class="cc-icon-btn" title="Settings"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg></button>
+                            </div>
+                        </div>
+
+                        <!-- 2x2 Tiles Grid -->
+                        <div class="cc-grid-2x2">
+                            <div class="cc-tile active" onclick="toggleCcTile(this)">
+                                <div class="cc-tile-icon blue">
+                                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#fff" stroke-width="2.5"><path d="M5 12.55a11 11 0 0 1 14.08 0"></path><path d="M1.42 9a16 16 0 0 1 21.16 0"></path><path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path><line x1="12" y1="20" x2="12.01" y2="20"></line></svg>
+                                </div>
+                                <div class="cc-tile-info">
+                                    <div class="cc-tile-title">Wi-Fi</div>
+                                    <div class="cc-tile-sub">starlink-ter...</div>
+                                </div>
+                                <div class="cc-tile-arrow">›</div>
+                            </div>
+
+                            <div class="cc-tile active" onclick="toggleCcTile(this)">
+                                <div class="cc-tile-icon blue">
+                                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#fff" stroke-width="2.5"><polyline points="6.5 6.5 17.5 17.5 12 23 12 1 17.5 6.5 6.5 17.5"></polyline></svg>
+                                </div>
+                                <div class="cc-tile-info">
+                                    <div class="cc-tile-title">Bluetooth</div>
+                                    <div class="cc-tile-sub">Not Connect...</div>
+                                </div>
+                                <div class="cc-tile-arrow">›</div>
+                            </div>
+
+                            <div class="cc-tile" onclick="toggleCcTile(this)">
+                                <div class="cc-tile-icon dark">
+                                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#fff" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10H12V2z"></path><path d="M12 12L2.1 10.1"></path></svg>
+                                </div>
+                                <div class="cc-tile-info">
+                                    <div class="cc-tile-title">Wireless Share</div>
+                                    <div class="cc-tile-sub">Off</div>
+                                </div>
+                            </div>
+
+                            <div class="cc-tile" onclick="toggleCcTile(this)">
+                                <div class="cc-tile-icon dark">
+                                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#fff" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+                                </div>
+                                <div class="cc-tile-info">
+                                    <div class="cc-tile-title">KDE Connect</div>
+                                    <div class="cc-tile-sub">Not Connected</div>
+                                </div>
+                                <div class="cc-tile-arrow">›</div>
+                            </div>
+                        </div>
+
+                        <!-- Music Widget -->
+                        <div class="cc-music-card">
+                            <div class="cc-music-art">
+                                <svg viewBox="0 0 24 24" width="24" height="24" fill="#fff"><path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle></svg>
+                            </div>
+                            <div class="cc-music-info">
+                                <div class="cc-music-title">Music Center</div>
+                                <div class="cc-music-sub">Not Playing</div>
+                            </div>
+                            <div class="cc-music-controls">
+                                <button title="Previous"><svg viewBox="0 0 24 24" width="16" height="16" fill="#fff"><polygon points="19 20 9 12 19 4 19 20"></polygon><line x1="5" y1="4" x2="5" y2="20" stroke="#fff" stroke-width="2"></line></svg></button>
+                                <button title="Play" class="play-btn"><svg viewBox="0 0 24 24" width="16" height="16" fill="#fff"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></button>
+                                <button title="Next"><svg viewBox="0 0 24 24" width="16" height="16" fill="#fff"><polygon points="5 4 15 12 5 20 5 4"></polygon><line x1="19" y1="4" x2="19" y2="20" stroke="#fff" stroke-width="2"></line></svg></button>
+                            </div>
+                        </div>
+
+                        <!-- Sliders -->
+                        <div class="cc-slider-row">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#fff" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                            <input type="range" min="0" max="100" value="75" class="cc-range">
+                        </div>
+
+                        <div class="cc-slider-row">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#fff" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+                            <input type="range" min="0" max="100" value="60" class="cc-range">
+                        </div>
+
+                        <!-- Action Toggles Grid (2 rows x 5 cols) -->
+                        <div class="cc-toggles-grid">
+                            <div class="cc-toggle-item active orange" onclick="toggleCcAction(this)">
+                                <div class="cc-toggle-icon"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#fff" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg></div>
+                                <span class="cc-toggle-label">Perf</span>
+                            </div>
+                            <div class="cc-toggle-item" onclick="toggleCcAction(this)">
+                                <div class="cc-toggle-icon"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#fff" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg></div>
+                                <span class="cc-toggle-label">Night</span>
+                            </div>
+                            <div class="cc-toggle-item" onclick="toggleCcAction(this)">
+                                <div class="cc-toggle-icon"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#fff" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg></div>
+                                <span class="cc-toggle-label">Capture</span>
+                            </div>
+                            <div class="cc-toggle-item" onclick="toggleCcAction(this)">
+                                <div class="cc-toggle-icon"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#fff" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg></div>
+                                <span class="cc-toggle-label">Focus</span>
+                            </div>
+                            <div class="cc-toggle-item active blue" onclick="toggleCcAction(this)">
+                                <div class="cc-toggle-icon"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#fff" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></div>
+                                <span class="cc-toggle-label">Dark</span>
+                            </div>
+                            <div class="cc-toggle-item" onclick="toggleCcAction(this)">
+                                <div class="cc-toggle-icon"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#fff" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2" ry="2"></rect><line x1="6" y1="8" x2="6" y2="8.01"></line><line x1="10" y1="8" x2="10" y2="8.01"></line><line x1="14" y1="8" x2="14" y2="8.01"></line><line x1="18" y1="8" x2="18" y2="8.01"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg></div>
+                                <span class="cc-toggle-label">Backlight</span>
+                            </div>
+                            <div class="cc-toggle-item active blue" onclick="toggleCcAction(this)">
+                                <div class="cc-toggle-icon"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#fff" stroke-width="2"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg></div>
+                                <span class="cc-toggle-label">Location</span>
+                            </div>
+                            <div class="cc-toggle-item" onclick="toggleCcAction(this)">
+                                <div class="cc-toggle-icon"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#fff" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg></div>
+                                <span class="cc-toggle-label">Logout</span>
+                            </div>
+                            <div class="cc-toggle-item" onclick="toggleCcAction(this)">
+                                <div class="cc-toggle-icon"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#fff" stroke-width="2"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg></div>
+                                <span class="cc-toggle-label">Restart</span>
+                            </div>
+                            <div class="cc-toggle-item active red" onclick="toggleCcAction(this)">
+                                <div class="cc-toggle-icon"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#fff" stroke-width="2"><path d="M18.36 6.64a9 9 0 1 1-12.73 0"></path><line x1="12" y1="2" x2="12" y2="12"></line></svg></div>
+                                <span class="cc-toggle-label">Power Off</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Settings App Demo -->
+                <div class="demo-panel" id="settings-app">
+                    <div class="mock-window">
+                        <div class="mock-titlebar">
+                            <div class="mock-buttons"><span class="red"></span><span class="yellow"></span><span class="green"></span></div>
+                            <div class="mock-title">System Settings</div>
+                        </div>
+                        <div class="mock-body settings-layout">
+                            <div class="settings-sidebar">
+                                <a href="#" class="setting-nav active">Appearance</a>
+                                <a href="#" class="setting-nav">Display & Monitor</a>
+                                <a href="#" class="setting-nav">Network & Wi-Fi</a>
+                                <a href="#" class="setting-nav">Bluetooth</a>
+                                <a href="#" class="setting-nav">Sound & Audio</a>
+                                <a href="#" class="setting-nav">Power & Battery</a>
+                                <a href="#" class="setting-nav">About System</a>
+                            </div>
+                            <div class="settings-content">
+                                <h3>Appearance & Theming</h3>
+                                <p class="settings-desc">Customize accent colors, window blur, and light/dark theme preference.</p>
+                                <div class="setting-group">
+                                    <label>Window Theme Style</label>
+                                    <div class="theme-options">
+                                        <div class="theme-opt active">Light Mode</div>
+                                        <div class="theme-opt">Dark Mode</div>
+                                        <div class="theme-opt">Auto (Sunset)</div>
+                                    </div>
+                                </div>
+                                <div class="setting-group">
+                                    <label>Accent Color</label>
+                                    <div class="color-swatches">
+                                        <span class="swatch blue active"></span>
+                                        <span class="swatch purple"></span>
+                                        <span class="swatch green"></span>
+                                        <span class="swatch orange"></span>
+                                        <span class="swatch pink"></span>
+                                    </div>
+                                </div>
+                                <div class="setting-group checkbox-row">
+                                    <input type="checkbox" id="blur-effect" checked>
+                                    <label for="blur-effect">Enable Acrylic Window Blur & Background Contrast</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Photos App Demo -->
+                <div class="demo-panel" id="photos-app">
+                    <div class="mock-window">
+                        <div class="mock-titlebar">
+                            <div class="mock-buttons"><span class="red"></span><span class="yellow"></span><span class="green"></span></div>
+                            <div class="mock-title">Photos Viewer</div>
+                        </div>
+                        <div class="mock-body photos-grid">
+                            <div class="photo-thumb" style="background: linear-gradient(135deg, #3b82f6, #1e40af);"><span>Aevis Wallpaper 1</span></div>
+                            <div class="photo-thumb" style="background: linear-gradient(135deg, #10b981, #047857);"><span>Bing Daily Nature</span></div>
+                            <div class="photo-thumb" style="background: linear-gradient(135deg, #f59e0b, #b45309);"><span>Sunset Horizon</span></div>
+                            <div class="photo-thumb" style="background: linear-gradient(135deg, #8b5cf6, #5b21b6);"><span>Deep Space Nebula</span></div>
+                            <div class="photo-thumb" style="background: linear-gradient(135deg, #ec4899, #be185d);"><span>Minimalist Abstract</span></div>
+                            <div class="photo-thumb" style="background: linear-gradient(135deg, #06b6d4, #0e7490);"><span>Mountain Glacier</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- File Manager Demo -->
+                <div class="demo-panel" id="filemanager-app">
+                    <div class="mock-window">
+                        <div class="mock-titlebar">
+                            <div class="mock-buttons"><span class="red"></span><span class="yellow"></span><span class="green"></span></div>
+                            <div class="mock-title">File Manager - /home/aevis</div>
+                        </div>
+                        <div class="mock-body fm-layout">
+                            <div class="fm-sidebar">
+                                <div class="fm-nav-item active">📁 Home</div>
+                                <div class="fm-nav-item">🖥️ Desktop</div>
+                                <div class="fm-nav-item">⬇️ Downloads</div>
+                                <div class="fm-nav-item">🖼️ Pictures</div>
+                                <div class="fm-nav-item">🎵 Music</div>
+                                <div class="fm-nav-item">💾 Trash</div>
+                            </div>
+                            <div class="fm-main">
+                                <div class="fm-path">/home/aevis/Documents</div>
+                                <div class="fm-files">
+                                    <div class="fm-file"><span>📄</span> project_notes.md</div>
+                                    <div class="fm-file"><span>📁</span> source_code</div>
+                                    <div class="fm-file"><span>🖼️</span> wallpaper_preview.jpg</div>
+                                    <div class="fm-file"><span>📊</span> benchmark_results.csv</div>
+                                    <div class="fm-file"><span>🎵</span> synthwave_track.flac</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Music App Demo -->
+                <div class="demo-panel" id="music-app">
+                    <div class="mock-window">
+                        <div class="mock-titlebar">
+                            <div class="mock-buttons"><span class="red"></span><span class="yellow"></span><span class="green"></span></div>
+                            <div class="mock-title">HyperTube Music</div>
+                        </div>
+                        <div class="mock-body music-layout">
+                            <div class="music-sidebar">
+                                <div class="music-nav active">🎵 Listen Now</div>
+                                <div class="music-nav">🔥 Trending</div>
+                                <div class="music-nav">📚 Library</div>
+                                <div class="music-nav">❤️ Liked Songs</div>
+                            </div>
+                            <div class="music-player-main">
+                                <div class="music-banner">
+                                    <div class="music-art-large">🎵</div>
+                                    <div class="music-meta">
+                                        <h3>Ambient Coding Sessions (Lo-Fi Beats)</h3>
+                                        <p>Aevis Audio Stream • Qt6 / C++20 Native Engine</p>
+                                        <div class="music-progress">
+                                            <div class="progress-bar-fill"></div>
+                                        </div>
+                                        <div class="music-time"><span>1:24</span><span>3:45</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Installation & Build Section -->
     <section class="section" id="install">
         <div class="container">
