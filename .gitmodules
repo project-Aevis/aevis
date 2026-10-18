@@ -1,0 +1,78 @@
+[submodule "app"]
+	path = app
+	url = https://github.com/project-Aevis/app.git
+[submodule "calculator"]
+	path = calculator
+	url = https://github.com/project-Aevis/calculator.git
+[submodule "core"]
+	path = core
+	url = https://github.com/project-Aevis/core.git
+[submodule "cursor-themes"]
+	path = cursor-themes
+	url = https://github.com/project-Aevis/cursor-themes.git
+[submodule "cutefish-framework"]
+	path = cutefish-framework
+	url = https://github.com/project-Aevis/cutefish-framework.git
+[submodule "dock"]
+	path = dock
+	url = https://github.com/project-Aevis/dock.git
+[submodule "filemanager"]
+	path = filemanager
+	url = https://github.com/project-Aevis/filemanager.git
+[submodule "fishui"]
+	path = fishui
+	url = https://github.com/project-Aevis/fishui.git
+[submodule "gtk-themes"]
+	path = gtk-themes
+	url = https://github.com/project-Aevis/gtk-themes.git
+[submodule "icons"]
+	path = icons
+	url = https://github.com/project-Aevis/icons.git
+[submodule "kwin-plugins"]
+	path = kwin-plugins
+	url = https://github.com/project-Aevis/kwin-plugins.git
+[submodule "launcher"]
+	path = launcher
+	url = https://github.com/project-Aevis/launcher.git
+[submodule "photos"]
+	path = photos
+	url = https://github.com/project-Aevis/photos.git
+[submodule "plymouth-theme"]
+	path = plymouth-theme
+	url = https://github.com/project-Aevis/plymouth-theme.git
+[submodule "qt-plugins"]
+	path = qt-plugins
+	url = https://github.com/project-Aevis/qt-plugins.git
+[submodule "screenlocker"]
+	path = screenlocker
+	url = https://github.com/project-Aevis/screenlocker.git
+[submodule "screenshot"]
+	path = screenshot
+	url = https://github.com/project-Aevis/screenshot.git
+[submodule "sddm-theme"]
+	path = sddm-theme
+	url = https://github.com/project-Aevis/sddm-theme.git
+[submodule "settings"]
+	path = settings
+	url = https://github.com/project-Aevis/settings.git
+[submodule "shell"]
+	path = shell
+	url = https://github.com/project-Aevis/shell.git
+[submodule "statusbar"]
+	path = statusbar
+	url = https://github.com/project-Aevis/statusbar.git
+[submodule "task-manager"]
+	path = task-manager
+	url = https://github.com/project-Aevis/task-manager.git
+[submodule "terminal"]
+	path = terminal
+	url = https://github.com/project-Aevis/terminal.git
+[submodule "updator"]
+	path = updator
+	url = https://github.com/project-Aevis/updator.git
+[submodule "wallpapers"]
+	path = wallpapers
+	url = https://github.com/project-Aevis/wallpapers.git
+[submodule "wine-patches"]
+	path = wine-patches
+	url = https://github.com/project-Aevis/wine-patches.git
