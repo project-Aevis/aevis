@@ -82,7 +82,10 @@ function selectDockItem(appKey) {
     // Update active button state
     const dockButtons = document.querySelectorAll('.flat-dock-interactive .dock-btn');
     dockButtons.forEach(btn => btn.classList.remove('active'));
-    event.currentTarget.classList.add('active');
+    const evt = window.event;
+    if (evt && evt.currentTarget) {
+        evt.currentTarget.classList.add('active');
+    }
 }
 
 function initDockShowcase() {
@@ -120,7 +123,10 @@ function setAccent(colorHex) {
 
     const buttons = document.querySelectorAll('.accent-btn');
     buttons.forEach(btn => btn.classList.remove('active'));
-    event.currentTarget.classList.add('active');
+    const evt = window.event;
+    if (evt && evt.currentTarget) {
+        evt.currentTarget.classList.add('active');
+    }
 }
 
 // 5. Interactive HyperTube Music App
@@ -134,7 +140,10 @@ function toggleMusicPlay() {
 function switchMusicTab(tabName) {
     const tabs = document.querySelectorAll('.ht-tab');
     tabs.forEach(tab => tab.classList.remove('active'));
-    event.currentTarget.classList.add('active');
+    const evt = window.event;
+    if (evt && evt.currentTarget) {
+        evt.currentTarget.classList.add('active');
+    }
 
     const views = document.querySelectorAll('.ht-view');
     views.forEach(view => view.classList.remove('active'));
@@ -149,7 +158,10 @@ function switchMusicTab(tabName) {
 function switchCodeTab(tabId) {
     const tabs = document.querySelectorAll('.code-tab');
     tabs.forEach(tab => tab.classList.remove('active'));
-    event.currentTarget.classList.add('active');
+    const evt = window.event;
+    if (evt && evt.currentTarget) {
+        evt.currentTarget.classList.add('active');
+    }
 
     const contents = document.querySelectorAll('.code-content');
     contents.forEach(content => content.classList.remove('active'));
