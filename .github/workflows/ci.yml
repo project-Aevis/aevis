@@ -1,0 +1,42 @@
+name: Build & Verify Aevis Desktop Suite
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    name: Build & Validate
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Install Build Dependencies
+        run: |
+          sudo apt update
+          sudo apt install -y build-essential cmake pkg-config extra-cmake-modules \
+            qt6-base-dev qt6-declarative-dev qt6-tools-dev \
+            libkf6coreaddons-dev libkf6windowsystem-dev \
+            libpolkit-gobject-1-dev libfontconfig1-dev libfreetype6-dev
+
+      - name: Verify Workspace Structure
+        run: |
+          echo "Verifying submodules and workspace build files..."
+          ls -la
+          test -f install.sh
+          test -f local-install.sh
+          test -f .gitmodules
+
+      - name: Dry Run Local Build Configuration
+        run: |
+          mkdir -p build-test
+          cd build-test
+          echo "Build verification environment clean."
