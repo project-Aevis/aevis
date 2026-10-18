@@ -585,19 +585,26 @@ a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 520px;
+    min-height: 560px;
+    background: linear-gradient(135deg, #2e1065 0%, #581c87 50%, #1e3a8a 100%);
+    border-radius: var(--radius-lg);
+    padding: 2.5rem;
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.4), var(--shadow-lg);
+    position: relative;
+    overflow: hidden;
 }
 
 .demo-panel {
     display: none;
     width: 100%;
-    max-width: 680px;
+    max-width: 720px;
     animation: fadeIn 0.3s ease;
+    justify-content: center;
+    align-items: center;
 }
 
 .demo-panel.active {
     display: flex;
-    justify-content: center;
 }
 
 @keyframes fadeIn {
@@ -605,15 +612,16 @@ a:hover {
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* Control Center Popover (Exact Pixel-for-Pixel Recreation) */
+/* Control Center Popover (Exact Pixel-for-Pixel Recreation with Acrylic Blur) */
 .control-center-popover {
-    background-color: #161922;
+    background-color: rgba(22, 25, 34, 0.82);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
     color: #ffffff;
     width: 380px;
     border-radius: 20px;
     padding: 1.5rem;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7), inset 0 0 0 1px rgba(255, 255, 255, 0.12);
     font-family: var(--font-sans);
 }
 
