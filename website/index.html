@@ -466,28 +466,101 @@
 
                 <!-- Music App Demo -->
                 <div class="demo-panel" id="music-app">
-                    <div class="mock-window">
-                        <div class="mock-titlebar">
+                    <div class="mock-window music-app-window">
+                        <div class="mock-titlebar dark-titlebar">
                             <div class="mock-buttons"><span class="red"></span><span class="yellow"></span><span class="green"></span></div>
-                            <div class="mock-title">HyperTube Music</div>
-                        </div>
-                        <div class="mock-body music-layout">
-                            <div class="music-sidebar">
-                                <div class="music-nav active">🎵 Listen Now</div>
-                                <div class="music-nav">🔥 Trending</div>
-                                <div class="music-nav">📚 Library</div>
-                                <div class="music-nav">❤️ Liked Songs</div>
+                            <div class="mock-title">Music</div>
+                            <div class="music-top-search">
+                                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="#94a3b8" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                                <span>Artists, Songs, Lyrics, and More...</span>
                             </div>
-                            <div class="music-player-main">
-                                <div class="music-banner">
-                                    <div class="music-art-large">🎵</div>
-                                    <div class="music-meta">
-                                        <h3>Ambient Coding Sessions (Lo-Fi Beats)</h3>
-                                        <p>Aevis Audio Stream • Qt6 / C++20 Native Engine</p>
-                                        <div class="music-progress">
-                                            <div class="progress-bar-fill"></div>
+                        </div>
+                        <div class="mock-body music-app-body">
+                            <div class="music-app-sidebar">
+                                <div class="music-sidebar-section">
+                                    <div class="music-nav-item">🏠 Home</div>
+                                    <div class="music-nav-item">🔥 New</div>
+                                    <div class="music-nav-item">📻 Radio</div>
+                                </div>
+                                <div class="music-sidebar-title">Library</div>
+                                <div class="music-sidebar-section">
+                                    <div class="music-nav-item">🕒 Recently Added</div>
+                                    <div class="music-nav-item">🎤 Artists</div>
+                                    <div class="music-nav-item active-tab">💿 Albums</div>
+                                    <div class="music-nav-item">🎵 Songs</div>
+                                    <div class="music-nav-item">🎬 Music Videos</div>
+                                    <div class="music-nav-item">❤️ Made for You</div>
+                                </div>
+                            </div>
+                            <div class="music-app-main">
+                                <div class="music-library-header">
+                                    <h2>Library</h2>
+                                    <div class="music-filter-chips">
+                                        <span class="chip">All</span>
+                                        <span class="chip">Playlists</span>
+                                        <span class="chip">Songs</span>
+                                        <span class="chip active">Albums</span>
+                                        <span class="chip">Artists</span>
+                                        <span class="chip">Podcasts</span>
+                                    </div>
+                                </div>
+                                <div class="music-albums-grid">
+                                    <div class="album-card">
+                                        <div class="album-art" style="background: linear-gradient(135deg, #d97706, #b45309);"><span>🎛️</span></div>
+                                        <div class="album-name">Hazir</div>
+                                        <div class="album-artist">Album • Amrinder Gill • 2026</div>
+                                    </div>
+                                    <div class="album-card">
+                                        <div class="album-art" style="background: linear-gradient(135deg, #eab308, #ca8a04);"><span>👑</span></div>
+                                        <div class="album-name">XSCAPE</div>
+                                        <div class="album-artist">Album • Michael Jackson • 2014</div>
+                                    </div>
+                                    <div class="album-card">
+                                        <div class="album-art" style="background: linear-gradient(135deg, #ec4899, #db2777);"><span>🌹</span></div>
+                                        <div class="album-name">loveless</div>
+                                        <div class="album-artist">Album • my bloody valentine</div>
+                                    </div>
+                                    <div class="album-card">
+                                        <div class="album-art" style="background: linear-gradient(135deg, #f59e0b, #d97706);"><span>📻</span></div>
+                                        <div class="album-name">I Could Live In Hope</div>
+                                        <div class="album-artist">Album • Low • 1994</div>
+                                    </div>
+                                    <div class="album-card">
+                                        <div class="album-art" style="background: linear-gradient(135deg, #8b5cf6, #6d28d9);"><span>✨</span></div>
+                                        <div class="album-name">So Tonight That I Might See</div>
+                                        <div class="album-artist">Album • Mazzy Star • 1993</div>
+                                    </div>
+                                    <div class="album-card">
+                                        <div class="album-art" style="background: linear-gradient(135deg, #f97316, #c2410c);"><span>🌅</span></div>
+                                        <div class="album-name">On Fire</div>
+                                        <div class="album-artist">Album • Galaxie 500 • 1988</div>
+                                    </div>
+                                </div>
+                                <!-- Floating Player Bar -->
+                                <div class="music-floating-player">
+                                    <div class="player-left">
+                                        <div class="player-mini-art">👑</div>
+                                        <div class="player-track-info">
+                                            <div class="t-title">Love Never Felt So Good</div>
+                                            <div class="t-artist">Michael Jackson - XSCAPE</div>
                                         </div>
-                                        <div class="music-time"><span>1:24</span><span>3:45</span></div>
+                                    </div>
+                                    <div class="player-center">
+                                        <div class="player-controls-row">
+                                            <button>🔀</button>
+                                            <button>⏮️</button>
+                                            <button class="p-play">▶️</button>
+                                            <button>⏭️</button>
+                                            <button>🔁</button>
+                                        </div>
+                                        <div class="player-timeline">
+                                            <span>1:33</span>
+                                            <div class="p-track"><div class="p-fill" style="width: 40%;"></div></div>
+                                            <span>-2:22</span>
+                                        </div>
+                                    </div>
+                                    <div class="player-right">
+                                        <span class="dolby">Dolby Atmos</span>
                                     </div>
                                 </div>
                             </div>
