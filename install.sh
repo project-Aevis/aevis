@@ -391,6 +391,19 @@ for deco_dir in /usr/lib/qt6/plugins/org.kde.kdecoration3 /usr/lib/qt6/plugins/o
     fi
 done
 
+# Ensure environment profiles for both Aevis and Cutefish
+if [ -d "/etc/profile.d" ]; then
+    echo -e "export XDG_MENU_PREFIX=aevis-\nexport KWIN_WAYLAND_NO_PERMISSION_CHECKS=1" | sudo tee /etc/profile.d/aevis-wayland.sh >/dev/null
+    echo -e "export XDG_MENU_PREFIX=cutefish-\nexport KWIN_WAYLAND_NO_PERMISSION_CHECKS=1" | sudo tee /etc/profile.d/cutefish-wayland.sh >/dev/null
+fi
+if [ -d "/usr/lib/environment.d" ]; then
+    echo -e "XDG_MENU_PREFIX=aevis-\nKWIN_WAYLAND_NO_PERMISSION_CHECKS=1" | sudo tee /usr/lib/environment.d/10-aevis.conf >/dev/null
+    echo -e "XDG_MENU_PREFIX=cutefish-\nKWIN_WAYLAND_NO_PERMISSION_CHECKS=1" | sudo tee /usr/lib/environment.d/10-cutefish.conf >/dev/null
+elif [ -d "/etc/environment.d" ]; then
+    echo -e "XDG_MENU_PREFIX=aevis-\nKWIN_WAYLAND_NO_PERMISSION_CHECKS=1" | sudo tee /etc/environment.d/10-aevis.conf >/dev/null
+    echo -e "XDG_MENU_PREFIX=cutefish-\nKWIN_WAYLAND_NO_PERMISSION_CHECKS=1" | sudo tee /etc/environment.d/10-cutefish.conf >/dev/null
+fi
+
 sudo ldconfig 2>/dev/null || true
 sudo gtk-update-icon-cache /usr/share/icons/Cutefish 2>/dev/null || true
 sudo update-desktop-database /usr/share/applications 2>/dev/null || true
@@ -398,9 +411,11 @@ fc-cache -f 2>/dev/null || true
 
 if command -v kbuildsycoca6 &>/dev/null; then
     log_info "Rebuilding KDE sycoca database (kbuildsycoca6)..."
+    XDG_MENU_PREFIX=aevis- kbuildsycoca6 --noincremental 2>/dev/null || true
     XDG_MENU_PREFIX=cutefish- kbuildsycoca6 --noincremental 2>/dev/null || true
 elif command -v kbuildsycoca5 &>/dev/null; then
     log_info "Rebuilding KDE sycoca database (kbuildsycoca5)..."
+    XDG_MENU_PREFIX=aevis- kbuildsycoca5 --noincremental 2>/dev/null || true
     XDG_MENU_PREFIX=cutefish- kbuildsycoca5 --noincremental 2>/dev/null || true
 fi
 
