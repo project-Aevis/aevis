@@ -176,8 +176,10 @@ function copyCode(codeElemId) {
     const codeElem = document.getElementById(codeElemId);
     if (!codeElem) return;
 
+    const btn = (window.event && window.event.currentTarget) ? window.event.currentTarget : null;
+
     navigator.clipboard.writeText(codeElem.textContent).then(() => {
-        const btn = event.currentTarget;
+        if (!btn) return;
         const originalText = btn.textContent;
         btn.textContent = 'Copied!';
         btn.style.backgroundColor = 'var(--flat-green)';
