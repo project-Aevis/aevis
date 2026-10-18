@@ -453,13 +453,12 @@ a:hover {
 /* Mockup Dock */
 .mockup-dock {
     height: 52px;
-    background-color: rgba(15, 23, 42, 0.85);
+    background-color: var(--bg-primary);
     border-top: 1px solid var(--border-color);
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 0.8rem;
-    backdrop-filter: blur(8px);
 }
 
 .dock-item {

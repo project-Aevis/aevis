@@ -31,7 +31,7 @@ log_error() {
 }
 
 CUTEFISH_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-GITHUB_BASE="https://github.com/CutefishOs-Revived"
+GITHUB_BASE="https://github.com/project-Aevis"
 
 # Dynamic Qt6 toolchain path discovery
 QT6_BIN_DIR=""
